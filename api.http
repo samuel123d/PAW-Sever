@@ -4,11 +4,11 @@ GET http://localhost:8080/
 
 ###
 
-GET http://localhost:8080/produto/1
+GET http://localhost:8080/ola-servidor
 
 ###
 
-GET http://localhost:8080/produto/8
+GET http://localhost:8080/que_horas_sao_por_favor
 
 ###
 

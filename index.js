@@ -1,17 +1,13 @@
-const express = require("express");
+const express = require('express');
+const path = require('path');
 const app = express();
-const produtoRota = require("./rotas/produtos")
 
-app.use(express.json())
-
-app.use('/static', express.static('public'))
-
-app.use("/produto", produtoRota)
-
-app.get("/", (req, res) => {
-  res.json({ msg: "Hello from Express!" });
+app.get('/animais', (req, res) => {
+  res.sendFile(path.join(__dirname, './pages/animais.html'));
 });
 
-app.listen(8080, () => {
-  console.log("Servidor pronto na porta 8080");
+app.use('/dados', express.static('dados'));
+
+app.listen(3000, () => {
+  console.log('Servidor rodando na porta 3000');
 });
